@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Try</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+      $(function(){
+        $initialize = $(".top-distance").text();
+        $("html,body").scrollTop($initialize);
+
+        $(".posts h1").click(function(){
+          var $top = $(window).scrollTop();
+          var post_id = $(this).text();
+          var post_class = "."+post_id
+          $(post_class).val($top);
+          $(this).next().click();
+        });
+        $(".posts h2").click(function(){
+          var post_id = $(this).text();
+          var id = "#"+post_id;
+          $(id).click();
+        });
+
+
+
+      });
+
+    </script>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

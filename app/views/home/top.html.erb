@@ -1,0 +1,51 @@
+<div class="top-distance">
+  <%= @name %>
+</div>
+
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<li>a</li>
+<%array=["0","1","2","3"]%>
+
+<div class="posts">
+
+<%array.each do |number|%>
+
+  <h1><%=number%></h1>
+  <h2><%=number%></h2>
+  <%=form_tag("/home/create") do%>
+    <textarea name="top" class="<%=number%>"></textarea>
+    <input type="submit" class="submit" id="<%=number%>" value="送信">
+  <%end%>
+<%end%>
+
+</div>
